@@ -1,8 +1,11 @@
 import React from 'react'
+import Account from '../../components/account'
 
 function User() {
   return (
-    <div>User</div>
+    <main>
+      <Account />
+    </main>
   )
 }
 

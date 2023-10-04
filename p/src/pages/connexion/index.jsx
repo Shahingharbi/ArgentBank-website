@@ -1,8 +1,11 @@
 import React from 'react'
+import Form from '../../components/form'
 
 function Connexion() {
   return (
-    <div>Connexion</div>
+    <main className='main bg-dark'>
+      <Form />
+    </main>
   )
 }
 
