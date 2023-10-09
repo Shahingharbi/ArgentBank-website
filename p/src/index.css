@@ -177,6 +177,18 @@ body {
   color: #fff;
 }
 
+.sign-up-button {
+  text-align: center;
+  width: 70%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #12002B;
+  background-color: #12002B;
+  color: #fff;
+}
+
 .sign-in-content {
   box-sizing: border-box;
   background-color: white;
