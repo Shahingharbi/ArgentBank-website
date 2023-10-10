@@ -3,7 +3,7 @@ import Account from '../../components/account'
 
 function User() {
   return (
-    <main>
+    <main className='main bg-dark'>
       <Account />
     </main>
   )
