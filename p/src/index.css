@@ -299,3 +299,25 @@ body {
     width: 200px;
   }
 }
+
+.header-editname {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.header-button {
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  background-color: #00bc77;
+  color: white;
+  border: none;
+}
+
+.label-gray {
+  background-color: #b2b2b2;
+  color: #5a5a5a;
+  pointer-events: none;
+}

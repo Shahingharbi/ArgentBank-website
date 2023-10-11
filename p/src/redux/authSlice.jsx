@@ -6,6 +6,7 @@ const authSlice = createSlice({
     user: {
       firstName: '',
       lastName : '',
+      userName : '',
     },
     token: null,
     error: null,
@@ -26,6 +27,7 @@ const authSlice = createSlice({
     updateUserName: (state, action) => {
       state.user.firstName = action.payload.firstName
       state.user.lastName = action.payload.lastName
+      state.user.userName = action.payload.userName
     },
   },
 });

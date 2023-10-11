@@ -47,6 +47,8 @@ export async function apiCallWithToken(dispatch, token, url, config) {
     console.error(error);
   }
 }
+
+
  
 // Fonction pour charger le profil utilisateur
 export const loadUserProfile =  (token) => async (dispatch) => {
@@ -61,14 +63,44 @@ export const loadUserProfile =  (token) => async (dispatch) => {
       const response = await Axios.post(url, null, config);
   
       if (response.status === 200) {
-        const { firstName, lastName } = response.data.body;
-        dispatch(updateUserName({ firstName, lastName }));
+        const { firstName, lastName, userName } = response.data.body;
+        dispatch(updateUserName({ firstName, lastName, userName}));
 
       }
     } catch (error) {
       console.error(error);
     }
   }
+
+
+  export async function editUsernameAPI(token, newUsername, user) {
+    try {
+      const url = 'http://localhost:3001/api/v1/user/profile';
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      };
+      const requestBody = {
+        userName: newUsername,
+      };
+  
+      const response = await Axios.put(url, requestBody, config);
+  
+      if (response.status === 200) {
+        const updatedUser = {
+          ...user, 
+          userName: newUsername, 
+        };
+        return updatedUser;
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+
   
 
 
