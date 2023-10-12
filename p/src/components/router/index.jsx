@@ -6,6 +6,7 @@ import Header from '../header';
 import User from '../../pages/user';
 import Footer from '../footer';
 import Error from '../../pages/error';
+import PrivateRoute from '../privateroute';
 
 function Router() {
   return (
@@ -14,7 +15,8 @@ function Router() {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/sign-in' element={<Connexion />} />
-            <Route path='/user' element={<User />} />
+            <Route path='/user' element={ <PrivateRoute element={<User />} /> } />
+                     
             <Route path='*' element={<Error />}  />
         </Routes> 
 
