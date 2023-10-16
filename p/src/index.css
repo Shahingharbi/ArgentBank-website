@@ -287,9 +287,9 @@ body {
 }
 
 @media (min-width: 720px) {
-  .account {
-    flex-direction: row;
-  }
+  /*.account {
+    flex-direction: row; 
+  } */
 
   .account-content-wrapper.cta {
     flex: 0;
@@ -321,3 +321,88 @@ body {
   color: #5a5a5a;
   pointer-events: none;
 }
+
+.account-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.chevron {
+  font-size: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.transaction-container {
+  width: 100%;
+}
+
+.transaction-top {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1fr 1fr 0.3fr;
+  padding: 0 10px;
+}
+
+
+.transaction p:nth-child(3) {
+  text-align: center;
+}
+.transaction p:nth-child(4) {
+  text-align: center;
+}
+.transaction p:nth-child(5) {
+  text-align: right;
+}
+
+
+.transaction-top p:nth-child(3) {
+  
+ text-align: center;
+}
+.transaction-top p:nth-child(4) {
+text-align: center
+}
+
+
+
+.transaction-details {
+  background-color: #00bc77;
+  color: white;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.transaction {
+  display: grid;
+grid-template-columns: 1.5fr 3fr 1fr 1fr 0.3fr;
+
+}
+
+.transaction-info p  {
+  margin: 5px 0;
+
+}
+
+.transaction-info {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1fr 1fr 0.3fr;
+  padding-bottom: 10px;
+}
+
+.fa-pencil {
+  padding-left: 10px;
+}
+.fa-xmark {
+  padding-left: 5px;
+  color: red;
+}
+
+.transaction-input {
+  background-color: #00bc77;
+  color: white;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+

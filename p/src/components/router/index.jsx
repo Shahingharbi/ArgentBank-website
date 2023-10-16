@@ -15,8 +15,7 @@ function Router() {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/sign-in' element={<Connexion />} />
-            <Route path='/user' element={ <PrivateRoute element={<User />} /> } />
-                     
+            <Route path='/user' element={ <PrivateRoute element={<User />} /> } />   
             <Route path='*' element={<Error />}  />
         </Routes> 
 
