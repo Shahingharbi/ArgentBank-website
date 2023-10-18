@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink,  } from 'react-router-dom';
 import { logout } from '../../redux/authSlice';
 import { loadUserProfile } from '../../redux/api';
-import Logo from '../../assets/img/argentBankLogo.png';
+import Logo from '../../assets/img/argentBankLogo.webp';
 
 function Header() {
   const token = useSelector((state) => state.auth.token);
@@ -32,7 +32,7 @@ function Header() {
           />
           <h1 className="sr-only">Argent Bank</h1>
         </NavLink>
-        <div className='main-nav'>
+        <div>
           {token ? (
             <>
 

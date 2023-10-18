@@ -46,17 +46,21 @@ function Form() {
 
   return (
     <section className="sign-in-content">
+       <form onSubmit={handleLogin}>
+      <div>
       <i className="fa fa-user-circle sign-in-icon"></i>
       <h1>Sign In</h1>
-      <form onSubmit={handleLogin}>
+      </div>
+
+     
         <div className="input-wrapper">
           <label htmlFor="email">Email</label>
           <input
             type="text"
             id="email"
-            value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="current-email"
           />
         </div>
         <div className="input-wrapper">
@@ -64,9 +68,9 @@ function Form() {
           <input
             type="password"
             id="password"
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
           />
         </div>
         <div className="input-remember">

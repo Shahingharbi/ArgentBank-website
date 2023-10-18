@@ -45,7 +45,7 @@ export default function Transaction({ title, amount, description }) {
           <p className="account-amount">{amount}</p>
           <p className="account-amount-description">{description}</p>
         </div>
-        <div className="account-content-wrapper cta">
+        <div className="account-content-right cta">
           <p className="chevron" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? 'X' : '>'}
           </p>
@@ -67,7 +67,7 @@ export default function Transaction({ title, amount, description }) {
                 <p>{transaction.description}</p>
                 <p>{transaction.amount}</p>
                 <p>{transaction.balance}</p>
-                <p onClick={handleTransactionInputSave}> {'>'} </p>
+                <i className="fa-solid fa-chevron-down" onClick={handleTransactionInputSave}></i>
               </div>
               {transactionInfoStates[index] && (
                 <div className="transaction-info">
@@ -104,10 +104,6 @@ export default function Transaction({ title, amount, description }) {
                               setIsOpenPencil(!isOpenPencil);
                             }}
                           ></i>
-                          <i
-                            className="fa-solid fa-xmark"
-                            onClick={() => setIsOpenPencil(!isOpenPencil)}
-                          ></i>
                         </div>
                       )}
                     </div>
@@ -132,13 +128,10 @@ export default function Transaction({ title, amount, description }) {
                             className="fa-solid fa-check"
                             onClick={() => {
                               handleTransactionInputSave2();
-                              setIsOpenPencil2(!isOpenPencil);
+                              setIsOpenPencil2(!isOpenPencil2);
                             }}
                           ></i>
-                          <i
-                            className="fa-solid fa-xmark"
-                            onClick={() => setIsOpenPencil2(!isOpenPencil2)}
-                          ></i>
+                  
                         </div>
                       )}
                     </div>
